@@ -41,7 +41,8 @@ const ContactForm = () => {
     setIsLoading(true);
     try {
       // Replace with your actual backend endpoint
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://everafterweddings.onrender.com/api/contact', formData);
+
       setSubmitted(true);
       setFormData({ name: '', email: '', message: '' });
       setErrors({});
