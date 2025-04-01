@@ -1,0 +1,294 @@
+/* Modern Colorful Wedding Theme Styles */
+:root {
+  --primary: #ff6b6b;
+  --secondary: #4ecdc4;
+  --accent: #ffbe0b;
+  --dark: #2b2d42;
+  --light: #f8f9fa;
+  --pink: #ff9fdb;
+  --purple: #845ec2;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+h1 {
+  background: linear-gradient(45deg, var(--primary), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  color: var(--dark);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 2px;
+}
+
+/* Section Styling */
+section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+section:nth-child(even) {
+  background-color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, rgba(255,107,107,0.1) 0%, rgba(78,205,196,0.1) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,190,11,0.05) 0%, transparent 70%);
+  z-index: -1;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(45deg, var(--primary), var(--purple));
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255,107,107,0.4);
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 10px;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(255,107,107,0.25);
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(255,107,107,0.05) 0%, rgba(78,205,196,0.05) 100%);
+  border-left: 4px solid var(--primary);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 100%);
+  color: white;
+  padding: 3rem 0;
+}
+
+footer a {
+  color: var(--secondary);
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Decorative Elements */
+.decorative-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,190,11,0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.circle-1 {
+  top: -100px;
+  right: -100px;
+}
+
+.circle-2 {
+  bottom: -50px;
+  left: -100px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+  
+  .hero-section {
+    min-height: auto;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .decorative-circle {
+    display: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary), var(--secondary));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+.hover-accent {
+  transition: all 0.3s ease;
+}
+
+.hover-accent:hover {
+  color: var(--accent) !important;
+  transform: translateX(3px);
+}
+
+.social-links a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px);
+  color: var(--accent) !important;
+}
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+/* Testimonials Section Styles */
+.scroll-container {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 10px;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+  min-height: 300px;
+  background: white;
+  border-radius: 15px !important;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-height: 250px;
+  }
+  
+  .testimonial-scroll-container::after {
+    width: 30px;
+  }
+}
