@@ -46,18 +46,3 @@ A responsive wedding planning landing page with contact form functionality, buil
    ```bash
    git clone https://github.com/kalyaniyash81/everafterweddings.git
    cd everafterweddings
-
-2)Set up backend
-cd server
-npm install
-cp .env.example .env
-# Edit .env with your MongoDB URI
-npm run dev
-
-3)Set up frontend
-bash
-Copy
-cd ../client
-npm install
-npm start
-
